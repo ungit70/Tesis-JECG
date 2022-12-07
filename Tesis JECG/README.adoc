@@ -1,0 +1,56 @@
+# **Simulador de sistema económico**
+
+En este repositorio se encuentra un sistema de simulación de economías de libre mercado o regulación por banco central con herramientas de tasa de interés.
+La simulación cuenta con dos tres agentes principales: productor y consumidor con un rol de trabajador.
+El sistema de interaccion economica parte del trabajo de titulacion de Canuto (2020) https://ru.dgb.unam.mx/handle/DGB_UNAM/TES01000800317[Tesis]
+
+Del trabajo mencionado, se retoma el modelo algebraico, se implementa en python y se agrega el agente banco central cuyas decisiones de política se basan en un algoritmo genético.
+
+## Instalación de dependencias
+
+Para instalar las librerías de dependencia ejecutar el comando:
+```
+pip install -r requirements.txt
+```
+
+Para instalar una a una ejecutar:
+```
+pip install nombreLibreria
+```
+
+
+## Dependencias
+
+* `pandas` libreria para tratamiendo de datos https://pandas.pydata.org/docs/reference/index.html[link]
+* `numpy` librería que permite realizar construir objetos multidimensionales y realizar operaciones sobre estos https://numpy.org/doc/stable/[link]
+* `statsmodels` librería especializa en modelos estadisticos https://www.statsmodels.org/stable/index.html[link]
+* `matplotlib` librería especializada en visualizacion de datos https://matplotlib.org/[link]
+
+
+## Ejecución
+
+Arrancar la libreta ```pruebasEstadisticasModelado.ipynb``` para replicar resultados o hacer modificaciones en datos de parámetros. Para algunos valores el modelo se indetermina.
+
+## Estructura y definiciones del proyecto
+
+
+* algoritmo.png -> Algoritmo de sistema económico.  
+* utilidades_locales.py -> funciones para mostrar resultados estadísticos y gráficos.  
+* pruebasEstadisticasModelado.pdf -> resultados de trabajo en pdf.  
+* pruebasEstadisticasModelado.ipynb -> resultados de trabajo en notebook.  
+* requirements.txt -> dependenvias de modelo.  
+* SISTEMAECOFREE.txt -> resultados de sistema no regulado.  
+** SISTEMAECOPOLMON.txt -> resultados de sistema regulado.  
+* /resultadosAleatorios -> carpeta con resultados de sistema regulado con modelo aleatorio.  
+** SISTEMAECOPOLMON.txt -> resultados de sistema regulado con modelo aleatorio.  
+* /resultadosUnicaGeneracion -> carpeta con resultados de sistema regulado con modelo de una generacion.  
+** SISTEMAECOPOLMON.txt -> resultados de sistema regulado con modelo aleatorio.  
+* /sistema_economico -> archivos de simulacion de modelo económico.  
+** calendario.py -> funcion que genera datos de serie de tiempo para generar datos de sistema.  
+** econoblack.py -> punto de entrada que hereda componentes de sistema económico e implementa el algoritmo del modelo.  
+** relaciones_eco.py -> definición de relaciones económicas de los agentes.  
+** agentes.py -> definicion de agentes economicos  
+** banco_central.py -> implementacion de regulador  
+** estructura_productiva.py -> definicion de funciones de produccion  
+** genetic_monetary.py -> método de determinación de política monetaria.  
+
